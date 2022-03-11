@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio JS</title>
+</head>
+<body>
+    <h1>Detector de nacionalidade</h1>
+    Detector de nacionalidade <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div name="res" id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var país = window.document.querySelector('input#pais')
+            var verifi = window.document.querySelector('div#res')
+            var res= String(país.value)
+            verifi.innerHTML = (`Sua nacionalidade é ${res}`)
+            if (res == 'Argentina') {
+                verifi.innerHTML += (`<p>Seu argentino de merda</p>`)
+            } else {
+                verifi.innerHTML += (`<p>Você não é tão merda assim</p>`)
+            }
+        }
+    </script>
+</body>
+</html>

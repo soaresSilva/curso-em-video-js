@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgba(48, 228, 228, 0.178);
+            color: rgba(190, 30, 30, 0.74);
+        }
+    </style>
+</head>
+<body>
+    <h1 name="pa">Estou apredendo DOM</h1>
+    <p>Aqui o resultado</p>
+    <p>Apredendo usar <strong> DOM</strong></p>
+    <div id="msg">Clique em mim</div>
+    <h2 class="de">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt est at aliquam doloremque eligendi pariatur nihil saepe ad, perferendis recusandae minima iusto alias possimus repellendus, esse laboriosam consequuntur neque ab?</h2>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+            window.document.write('Aqui está o resultado: ' + p1.innerText)
+            p1.style.color = 'blue'
+            window.alert('Aqui está o resultado: ' + p1.innerHTML)
+
+        var d = window.document.getElementById('msg')
+            d.style.backgroundColor='black'
+            d.style.color='rgba(48, 228, 228, 0.178)'
+            
+        var par = window.document.getElementsByName('pa')[0]
+            par.style.color='brown'
+
+        var q = window.document.querySelector('h2.de')
+            q.style.color='green'
+    </script>
+</body>
+</html>
